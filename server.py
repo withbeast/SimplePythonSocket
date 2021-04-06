@@ -14,10 +14,10 @@ def on_accept(s: sock):
 def handler(n: node, l: list):
     while True:
         d = n.sock.recv_struct()
-        log("接收:"+d)
         if d==None:
             log("接收失败")
             break
+        log("接收:"+d)
         msg = d + ":" + n.id
         n.sock.send_struct(msg)
 

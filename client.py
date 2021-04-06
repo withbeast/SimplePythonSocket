@@ -14,7 +14,7 @@ def recv_handler(s: sock):
         print(msg)
 
 
-c = client("49.235.220.45", 16666)
+c = client("xxx.xxx.xxx.xxx", 16666)
 c.on_connect=on_connect
 c.handler=recv_handler
 c.connect()
